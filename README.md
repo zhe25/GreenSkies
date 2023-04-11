@@ -1,6 +1,6 @@
 Green Skies An application for tracking flight-related carbon emissions
 
-Creators: Ella Johnson Enyang Zhang Grace Hanlon Hayley Krippner He ZhengJingRui Nathan Huynh
+Creators: Ella Johnson, Enyang Zhang, Grace Hanlon, Hayley Krippner, He ZhengJingRui, Nathan Huynh
 
 Year: 2020
 
