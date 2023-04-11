@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="324.0" prefWidth="513.0" style="-fx-background-color: WHITE;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.dataview.RouteFilterPopUpController">
+    <children>
+        <CheckBox fx:id="airlineCheckBox" layoutX="40.0" layoutY="85.0" mnemonicParsing="false" prefHeight="28.0"
+                  prefWidth="259.0" text="Airline IATA/ICAO">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="sourceCheckBox" layoutX="39.0" layoutY="124.0" mnemonicParsing="false" text="Source IATA/ICAO">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </CheckBox>
+        <TextField fx:id="airlineField" layoutX="306.0" layoutY="84.0" prefHeight="32.0" prefWidth="163.0"
+                   promptText="Enter IATA/ICAO">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="filterButton" layoutX="167.0" layoutY="243.0" mnemonicParsing="false" onAction="#applyFilters"
+                prefHeight="55.0" prefWidth="180.0" style="-fx-background-color: #116754;" text="Appy Filters"
+                textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Label fx:id="errorText" layoutX="39.0" layoutY="201.0" prefHeight="36.0" prefWidth="428.0"
+               text="No matches found" textFill="RED" visible="false">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="destinationCheckBox" layoutX="38.0" layoutY="164.0" mnemonicParsing="false"
+                  text="Destination IATA/ICAO">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </CheckBox>
+        <TextField fx:id="sourceField" layoutX="306.0" layoutY="123.0" prefHeight="32.0" prefWidth="163.0"
+                   promptText="Enter IATA/ICAO">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="destinationField" layoutX="306.0" layoutY="163.0" prefHeight="32.0" prefWidth="163.0"
+                   promptText="Enter IATA/ICAO">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Label layoutX="172.0" layoutY="33.0" text="Filter Routes">
+            <font>
+                <Font name="Arial" size="30.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="321.0" prefWidth="414.0" style="-fx-background-color: WHITE;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.dataview.AirlineFilterPopUpController">
+    <children>
+        <CheckBox fx:id="countryCheckBox" layoutX="59.0" layoutY="85.0" mnemonicParsing="false" text="Country">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </CheckBox>
+        <ChoiceBox fx:id="activeSelection" layoutX="186.0" layoutY="139.0" prefHeight="37.0" prefWidth="187.0"
+                   style="-fx-background-color: #116754; -fx-font-size:20; -fx-text-fill: white;"/>
+        <CheckBox fx:id="activeCheckBox" layoutX="59.0" layoutY="144.0" mnemonicParsing="false" text="Active">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </CheckBox>
+        <TextField fx:id="countryField" layoutX="186.0" layoutY="81.0" prefHeight="36.0" prefWidth="187.0"
+                   promptText="Enter country">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="filterButton" layoutX="117.0" layoutY="252.0" mnemonicParsing="false" onAction="#applyFilters"
+                prefHeight="55.0" prefWidth="180.0" style="-fx-background-color: #116754;" text="Appy Filters"
+                textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Label layoutX="116.0" layoutY="23.0" text="Filter Airlines">
+            <font>
+                <Font name="Arial" size="30.0"/>
+            </font>
+        </Label>
+        <Label fx:id="errorText" layoutX="58.0" layoutY="196.0" prefHeight="36.0" prefWidth="317.0"
+               text="No matches found" textFill="RED" visible="false">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

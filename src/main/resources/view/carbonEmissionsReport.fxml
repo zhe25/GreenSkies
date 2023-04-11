@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.CarbonEmissionsReportController">
+    <children>
+        <Text fontSmoothingType="LCD" layoutX="422.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Total Emissions:" textAlignment="RIGHT" wrappingWidth="150.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="345.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Total Distance Travelled:" textAlignment="RIGHT" wrappingWidth="228.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="320.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Most Emissions Route(s):" textAlignment="RIGHT" wrappingWidth="253.99999424815178">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="332.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Least Emissions Route(s):" textAlignment="RIGHT" wrappingWidth="245.0000001490116">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="348.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Most Distance Route(s):" textAlignment="RIGHT" wrappingWidth="228.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="349.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Least Distance Route(s):" textAlignment="RIGHT" wrappingWidth="228.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="271.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Most Visited Source Airport(s):" textAlignment="RIGHT" wrappingWidth="305.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="227.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Most Visited Destination Airport(s):" textAlignment="RIGHT" wrappingWidth="349.6708865761757">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="239.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Least Visited Destination Airport(s):" textAlignment="RIGHT" wrappingWidth="336.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="278.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Carbon Emissions Goal:" textAlignment="RIGHT" wrappingWidth="297.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="596.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Total Emissions" textAlignment="RIGHT" visible="false" wrappingWidth="228.6709114909172">
+            <font>
+                <Font name="Verdana" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="845.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg"
+              textAlignment="RIGHT" wrappingWidth="20.67090068757534">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="837.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg"
+              textAlignment="RIGHT" wrappingWidth="29.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="displayTotalEmissionsField" editable="false" layoutX="591.0" layoutY="93.0"
+                   mouseTransparent="true" prefHeight="30.0" prefWidth="240.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayTotalDistanceTravelledField" editable="false" layoutX="592.0" layoutY="132.0"
+                   mouseTransparent="true" prefHeight="30.0" prefWidth="240.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayMostEmissionsRouteField" editable="false" layoutX="591.0" layoutY="173.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayLeastEmissionsRouteField" editable="false" layoutX="591.0" layoutY="215.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayMostDistanceRouteField" editable="false" layoutX="591.0" layoutY="256.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayLeastDistanceRouteField" editable="false" layoutX="591.0" layoutY="296.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayMostVisitedSourceAirportField" editable="false" layoutX="591.0" layoutY="337.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayLeastVisitedSourceAirportField" editable="false" layoutX="591.0" layoutY="379.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayMostVisitedDestinationAirportField" editable="false" layoutX="591.0" layoutY="421.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayCarbonEmissionGoalField" editable="false" layoutX="591.0" layoutY="509.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="240.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="displayLeastVisitedDestinationAirportField" editable="false" layoutX="591.0" layoutY="465.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="730.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Text fontSmoothingType="LCD" layoutX="257.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Least Visited Source Airport(s):" textAlignment="RIGHT" wrappingWidth="319.6709099560976">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="carbonEmissionGoalField" layoutX="420.0" layoutY="51.0" prefHeight="32.0" prefWidth="411.0"
+                   promptText="Enter your carbon emissions goal as a double">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Label fx:id="errorText" layoutX="444.0" layoutY="110.0" prefHeight="27.0" prefWidth="345.0"
+               text="Please enter a carbon emissions goal" textFill="RED" visible="false">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="generateReportButton" layoutX="923.0" layoutY="40.0" mnemonicParsing="false"
+                onAction="#generateReportData" prefHeight="40.0" prefWidth="240.0"
+                style="-fx-background-color: #116754;" text="Generate Report" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Text fontSmoothingType="LCD" layoutX="845.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg"
+              textAlignment="RIGHT" wrappingWidth="20.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="881.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Number of Trees to Offset Emissions:" textAlignment="RIGHT" wrappingWidth="178.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="displayTreeOffsetField" editable="false" layoutX="1082.0" layoutY="506.0"
+                   mouseTransparent="true" prefHeight="32.0" prefWidth="240.0"
+                   promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="ClearReportDataButton" layoutX="923.0" layoutY="103.0" mnemonicParsing="false"
+                onAction="#clearReportData" prefHeight="30.0" prefWidth="240.0" style="-fx-background-color: #116754;"
+                text="Clear" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <VBox prefHeight="703.0" prefWidth="214.0" style="-fx-background-color: #116754;">
+            <children>
+                <Button fx:id="btnUpload" alignment="CENTER" mnemonicParsing="false" onAction="#toUploadData"
+                        onMouseClicked="#toUploadData" prefHeight="68.0" prefWidth="225.0"
+                        style="-fx-background-color: transparent;" text="Upload Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnRouteDataView" alignment="CENTER" mnemonicParsing="false" onAction="#toRouteDataView"
+                        prefHeight="95.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Route Data"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirportDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirportDataView" prefHeight="88.0" prefWidth="227.0"
+                        style="-fx-background-color: transparent;" text="Airport Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirlineDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirlineDataView" prefHeight="88.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Airline Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnFlightHistory" alignment="CENTER" mnemonicParsing="false" onAction="#toFlightHistory"
+                        prefHeight="72.0" prefWidth="220.0" style="-fx-background-color: transparent;"
+                        text="Flight History" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnCarbonEmissionsReport" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toCarbonEmissionsReport" prefHeight="116.0" prefWidth="218.0"
+                        style="-fx-background-color: #00aa88;" text="Carbon Emissions Report" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnMapOfAirports" alignment="CENTER" mnemonicParsing="false" onAction="#toMapOfAirports"
+                        prefHeight="78.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Routes Map"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnGraphs" alignment="CENTER" mnemonicParsing="false" onAction="#toGraphs"
+                        onMouseClicked="#toUploadData" prefHeight="60.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Graph" textAlignment="CENTER" textFill="WHITE"
+                        wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAnalyseFlight" alignment="CENTER" mnemonicParsing="false" onAction="#toAnalyseFlight"
+                        prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: transparent;"
+                        text="Analyse Flight" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Text fontSmoothingType="LCD" layoutX="835.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="km"
+              textAlignment="RIGHT" wrappingWidth="35.6708984375">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <Text fontSmoothingType="LCD" layoutX="424.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Status:" textAlignment="RIGHT" wrappingWidth="150.67090326547623">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Text>
+        <TextArea fx:id="displayStatusCommentField" editable="false" layoutX="592.0" layoutY="562.0"
+                  mouseTransparent="true" prefHeight="127.0" prefWidth="730.0"
+                  promptText="Generate report to diplay data">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </TextArea>
+    </children>
+</AnchorPane>

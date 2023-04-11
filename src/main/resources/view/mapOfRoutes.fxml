@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400" style="-fx-background-color: WHITE;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.MapOfRoutesController">
+    <children>
+        <Text layoutX="277.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+        <WebView fx:id="mapView" layoutX="300.0" layoutY="25.0" prefHeight="500.0" prefWidth="1000.0"/>
+        <VBox prefHeight="703.0" prefWidth="214.0" style="-fx-background-color: #116754;">
+            <children>
+                <Button fx:id="btnUpload" alignment="CENTER" mnemonicParsing="false" onAction="#toUploadData"
+                        onMouseClicked="#toUploadData" prefHeight="68.0" prefWidth="225.0"
+                        style="-fx-background-color: transparent;" text="Upload Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnRouteDataView" alignment="CENTER" mnemonicParsing="false" onAction="#toRouteDataView"
+                        prefHeight="95.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Route Data"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirportDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirportDataView" prefHeight="88.0" prefWidth="227.0"
+                        style="-fx-background-color: transparent;" text="Airport Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirlineDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirlineDataView" prefHeight="88.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Airline Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnFlightHistory" alignment="CENTER" mnemonicParsing="false" onAction="#toFlightHistory"
+                        prefHeight="72.0" prefWidth="220.0" style="-fx-background-color: transparent;"
+                        text="Flight History" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnCarbonEmissionsReport" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toCarbonEmissionsReport" prefHeight="116.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Carbon Emissions Report" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnMapOfAirports" alignment="CENTER" mnemonicParsing="false" onAction="#toMapOfAirports"
+                        prefHeight="78.0" prefWidth="218.0" style="-fx-background-color: #00aa88;" text="Routes Map"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnGraphs" alignment="CENTER" mnemonicParsing="false" onAction="#toGraphs"
+                        onMouseClicked="#toUploadData" prefHeight="60.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Graph" textAlignment="CENTER" textFill="WHITE"
+                        wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAnalyseFlight" alignment="CENTER" mnemonicParsing="false" onAction="#toAnalyseFlight"
+                        prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: transparent;"
+                        text="Analyse Flight" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Button fx:id="buttonShow" layoutX="700.0" layoutY="602.0" mnemonicParsing="false" onAction="#showMap"
+                style="-fx-background-color: #116754;" text="Show selected route" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

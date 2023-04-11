@@ -1,0 +1,9 @@
+# Default ignored files
+.idea/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+target/
+app.sqlite
+*.iml
+/dependency-reduced-pom.xml

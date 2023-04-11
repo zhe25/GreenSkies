@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700" prefWidth="1400" style="-fx-background-color: WHITE;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.dataview.AirlineDataViewController">
+    <children>
+        <TableView fx:id="tableView" layoutX="238.0" layoutY="155.0" prefHeight="453.0" prefWidth="1134.0">
+            <columns>
+                <TableColumn fx:id="addColumn" prefWidth="50.0" text="Add"/>
+                <TableColumn fx:id="airlineIDColumn" prefWidth="94.0" text="Airline ID"/>
+                <TableColumn fx:id="airlineNameColumn" prefWidth="204.0" text="Airline Name"/>
+                <TableColumn fx:id="airlineAliasColumn" prefWidth="122.0" text="Alias"/>
+                <TableColumn fx:id="airlineIATAColumn" prefWidth="123.0" text="IATA"/>
+                <TableColumn fx:id="ICAOColumn" minWidth="0.0" prefWidth="126.0" text="ICAO"/>
+                <TableColumn fx:id="callsignColumn" minWidth="0.0" prefWidth="116.0" text="Callsign"/>
+                <TableColumn fx:id="countryColumn" minWidth="0.0" prefWidth="150.0" text="Country"/>
+                <TableColumn fx:id="activeStatusColumn" minWidth="0.0" prefWidth="133.0" text="Active Status"/>
+            </columns>
+        </TableView>
+        <Button fx:id="searchButton" layoutX="889.0" layoutY="50.0" mnemonicParsing="false" onAction="#search"
+                prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #116754;" text="Search"
+                textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="searchBar" layoutX="446.0" layoutY="50.0" prefHeight="40.0" prefWidth="430.0"
+                   promptText="Select search type then enter search value here">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </TextField>
+        <ChoiceBox fx:id="searchTypeSelection" layoutX="241.0" layoutY="50.0" prefHeight="40.0" prefWidth="190.0"
+                   style="-fx-background-color: b3b3b3; -fx-font-size: 20; -fx-text-fill: white;"/>
+        <Label fx:id="errorText" layoutX="444.0" layoutY="110.0" prefHeight="27.0" prefWidth="345.0"
+               text="Search error mesage goes here" textFill="RED" visible="false">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="filterOptionsButton" layoutX="1100.0" layoutY="98.0" mnemonicParsing="false"
+                onAction="#filterOptions" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #116754;"
+                text="Filter Options" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="clearSearchButton" layoutX="889.0" layoutY="98.0" mnemonicParsing="false" onAction="#clearSearch"
+                prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #116754;" text="Clear"
+                textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="removeBtn" layoutX="1100.0" layoutY="50.0" mnemonicParsing="false" onAction="#removeSelected"
+                prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #116754;"
+                text="Remove Airline Record(s)" textFill="WHITE">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <VBox prefHeight="703.0" prefWidth="214.0" style="-fx-background-color: #116754;">
+            <children>
+                <Button fx:id="btnUpload" alignment="CENTER" mnemonicParsing="false" onAction="#toUploadData"
+                        onMouseClicked="#toUploadData" prefHeight="68.0" prefWidth="225.0"
+                        style="-fx-background-color: transparent;" text="Upload Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnRouteDataView" alignment="CENTER" mnemonicParsing="false" onAction="#toRouteDataView"
+                        prefHeight="95.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Route Data"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirportDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirportDataView" prefHeight="88.0" prefWidth="227.0"
+                        style="-fx-background-color: transparent;" text="Airport Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirlineDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirlineDataView" prefHeight="88.0" prefWidth="218.0"
+                        style="-fx-background-color: #00aa88;" text="Airline Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnFlightHistory" alignment="CENTER" mnemonicParsing="false" onAction="#toFlightHistory"
+                        prefHeight="72.0" prefWidth="220.0" style="-fx-background-color: transparent;"
+                        text="Flight History" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnCarbonEmissionsReport" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toCarbonEmissionsReport" prefHeight="116.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Carbon Emissions Report" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnMapOfAirports" alignment="CENTER" mnemonicParsing="false" onAction="#toMapOfAirports"
+                        prefHeight="78.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Routes Map"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnGraphs" alignment="CENTER" mnemonicParsing="false" onAction="#toGraphs"
+                        onMouseClicked="#toUploadData" prefHeight="60.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Graph" textAlignment="CENTER" textFill="WHITE"
+                        wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAnalyseFlight" alignment="CENTER" mnemonicParsing="false" onAction="#toAnalyseFlight"
+                        prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: transparent;"
+                        text="Analyse Flight" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="647.0" prefWidth="1064.0" style="-fx-background-color: WHITE;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.dataview.RouteAddToHistoryPopUpController">
+    <children>
+        <TableView fx:id="tableView" layoutX="41.0" layoutY="165.0" prefHeight="382.0" prefWidth="993.0">
+            <columns>
+                <TableColumn fx:id="passengerNumber" prefWidth="168.0" text="No. of passenger"/>
+                <TableColumn fx:id="airlineNameColumn" prefWidth="138.0" text="Airline Name"/>
+                <TableColumn fx:id="sourceAirportColumn" prefWidth="133.0" text="Source Airport"/>
+                <TableColumn fx:id="destinationAirportColumn" prefWidth="151.0" text="Destination Airport"/>
+                <TableColumn fx:id="codeShareColumn" minWidth="0.0" prefWidth="133.0" text="Code Share"/>
+                <TableColumn fx:id="numOfStopsColumn" minWidth="0.0" prefWidth="141.0" text="Number of Stops"/>
+                <TableColumn fx:id="equipmentColumn" minWidth="0.0" prefWidth="128.0" text="Equipment"/>
+            </columns>
+        </TableView>
+        <Button fx:id="confirmBtn" layoutX="538.0" layoutY="570.0" mnemonicParsing="false" onAction="#confirm"
+                prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #116754;" text="Confirm"
+                textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Button fx:id="cancelBtn" layoutX="678.0" layoutY="570.0" mnemonicParsing="false" onAction="#cancel"
+                prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #116754;" text="Cancel"
+                textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Button fx:id="setAllPassengerBtn" layoutX="268.0" layoutY="570.0" mnemonicParsing="false"
+                onAction="#setAllPassengerTo1" prefHeight="40.0" prefWidth="250.0"
+                style="-fx-background-color: #116754;" text="Set All Passenger to 1" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="20.0"/>
+            </font>
+        </Button>
+        <Text layoutX="181.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Please enter the number of passengers for each route taken and ensure to press 'ENTER' to confirm">
+            <font>
+                <Font name="Arial" size="16.0"/>
+            </font>
+        </Text>
+        <Text layoutX="237.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting Passenger Numbers">
+            <font>
+                <Font name="Arial" size="48.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

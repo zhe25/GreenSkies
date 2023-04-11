@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+            prefWidth="1400" style="-fx-background-color: #116754 #116754;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.InfoController">
+    <children>
+        <Text fill="WHITE" layoutX="307.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Green Skies Information">
+            <font>
+                <Font name="Arial" size="72.0"/>
+            </font>
+        </Text>
+        <Button fx:id="BackButton" layoutX="607.0" layoutY="523.0" mnemonicParsing="false"
+                onAction="#BackToPreviousWindow" prefHeight="65.0" prefWidth="155.0"
+                style="-fx-background-color: WHITE;" text="Back">
+            <font>
+                <Font name="Arial" size="30.0"/>
+            </font>
+        </Button>
+        <Text fill="WHITE" layoutX="160.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Green Skies provides you with a space to search  and upload flight data in order to track your carbon emissions produced from flight travel."
+              textAlignment="CENTER" wrappingWidth="1033.240219116211">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="453.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="filter and search uploaded flight route, airport and airline data" textAlignment="CENTER"
+              wrappingWidth="845.5735778808594">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="187.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Royalty-free image taken from Unsplash" wrappingWidth="417.5735778808594">
+            <font>
+                <Font name="Arial" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="124.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="viusalise flight routes" textAlignment="CENTER" wrappingWidth="309.5735778808594">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="768.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="."
+              textAlignment="CENTER" wrappingWidth="29.573577880859375">
+            <font>
+                <Font name="Arial" size="96.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="798.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="generate a carbon emissions report" textAlignment="CENTER" wrappingWidth="514.5735778808594">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="110.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="compare carbon emissions of two flight routes" textAlignment="CENTER"
+              wrappingWidth="665.5735778808594">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="428.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="."
+              textAlignment="CENTER" wrappingWidth="29.573577880859375">
+            <font>
+                <Font name="Arial" size="96.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.guiController.GraphsController">
+    <children>
+        <VBox prefHeight="703.0" prefWidth="214.0" style="-fx-background-color: #116754;">
+            <children>
+                <Button fx:id="btnUpload" alignment="CENTER" mnemonicParsing="false" onAction="#toUploadData"
+                        onMouseClicked="#toUploadData" prefHeight="68.0" prefWidth="214.0"
+                        style="-fx-background-color: transparent;" text="Upload Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnRouteDataView" alignment="CENTER" mnemonicParsing="false" onAction="#toRouteDataView"
+                        prefHeight="95.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Route Data"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirportDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirportDataView" prefHeight="88.0" prefWidth="227.0"
+                        style="-fx-background-color: transparent;" text="Airport Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAirlineDataView" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toAirlineDataView" prefHeight="88.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Airline Data" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnFlightHistory" alignment="CENTER" mnemonicParsing="false" onAction="#toFlightHistory"
+                        prefHeight="72.0" prefWidth="220.0" style="-fx-background-color: transparent;"
+                        text="Flight History" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnCarbonEmissionsReport" alignment="CENTER" mnemonicParsing="false"
+                        onAction="#toCarbonEmissionsReport" prefHeight="116.0" prefWidth="218.0"
+                        style="-fx-background-color: transparent;" text="Carbon Emissions Report" textAlignment="CENTER"
+                        textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnMapOfAirports" alignment="CENTER" mnemonicParsing="false" onAction="#toMapOfAirports"
+                        prefHeight="78.0" prefWidth="218.0" style="-fx-background-color: transparent;" text="Routes Map"
+                        textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnGraphs" alignment="CENTER" mnemonicParsing="false" onAction="#toGraphs"
+                        onMouseClicked="#toUploadData" prefHeight="60.0" prefWidth="218.0"
+                        style="-fx-background-color: #00aa88;" text="Graph" textAlignment="CENTER" textFill="WHITE"
+                        wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btnAnalyseFlight" alignment="CENTER" mnemonicParsing="false" onAction="#toAnalyseFlight"
+                        prefHeight="74.0" prefWidth="216.0" style="-fx-background-color: transparent;"
+                        text="Analyse Flight" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Arial" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Pane layoutX="563.0" layoutY="101.0" prefHeight="375.0" prefWidth="404.0">
+            <children>
+                <BarChart fx:id="barChart" layoutX="-283.0" layoutY="-33.0" prefHeight="570.0" prefWidth="958.0"
+                          title="Carbon Emissions Produced per Route ">
+                    <xAxis>
+                        <CategoryAxis label="Route" side="BOTTOM" fx:id="xAxis"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxis" label="Carbon Emissions (kg)" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+                <Text fx:id="warningText" fill="#e40707" layoutX="-91.0" layoutY="90.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0"
+                      text="You do not have any routes in your flight history to show on the graph. &#10;&#10;Go to the Route Data page to select flights to add to your history.&#10;&#10;Note you must have uploaded airport data for  emissions calculations."
+                      textAlignment="CENTER" visible="false" wrappingWidth="572.449951171875">
+                    <font>
+                        <Font name="Arial Bold" size="21.0"/>
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

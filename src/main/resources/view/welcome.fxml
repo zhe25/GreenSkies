@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+            prefWidth="1400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.guiController.WelcomeController">
+    <children>
+        <ImageView fitHeight="943.0" fitWidth="1415.0" layoutX="-8.0" layoutY="-241.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../images/WelcomeImage.jpg"/>
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="405.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GREEN SKIES"
+              textAlignment="CENTER" wrappingWidth="588.8984375">
+            <font>
+                <Font name="Tahoma" size="80.0"/>
+            </font>
+        </Text>
+        <Button fx:id="continueButton" layoutX="619.0" layoutY="446.0" mnemonicParsing="false"
+                onAction="#continueToMainScreen" prefHeight="49.0" prefWidth="153.0"
+                style="-fx-background-color: WHITE;" text="Continue">
+            <font>
+                <Font name="Arial" size="26.0"/>
+            </font>
+        </Button>
+        <Button fx:id="InfoButton" layoutX="619.0" layoutY="507.0" mnemonicParsing="false" onAction="#toInfoScreen"
+                prefHeight="49.0" prefWidth="153.0" style="-fx-background-color: WHITE;" text="Info">
+            <font>
+                <Font name="Arial" size="26.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
